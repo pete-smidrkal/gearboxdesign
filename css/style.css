@@ -1,0 +1,974 @@
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  color: #ffffff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+p {
+  word-spacing: 3px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 5px;
+  font-weight: lighter;
+}
+
+.add {
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
+}
+
+.add2 {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  width: 100%;
+}
+
+
+nav {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+}
+
+nav > ul > li > a { /* adjust menu font style */
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav > ul > li > a:visited { /* to make sure the white color is inherited */
+  color: #fff;
+}
+
+nav > ul > li > a:hover, .selected { /* to show a bottom border on hover which is stylable instead of just using underline */
+  border-bottom: 1px solid rgba(241,127,5);
+  padding-bottom: 3px;
+  color: rgba(241,127,5);
+}
+
+/* Dropdown Button */
+.dropbtn {
+  display: none;
+  float: right;
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  margin: 10px;
+  font-size: 30px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: -110px;
+  background-color: rgb(0, 0, 0, 0.8);
+  min-width: 150px;
+  max-width: inherit;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 10px;
+  border-bottom: 1px solid rgba(241,127,5);
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover a:active {background-color: rgba(241,127,5);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: transparent;}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  background-color: rgba(241,127,5, 0.8);
+}
+
+.english {
+  font-style: italic;
+}
+
+
+#more {display: none;}
+
+#more2 {display: none;}
+
+a {
+  cursor: pointer;
+}
+
+.applink {
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.applink a {
+  color: rgba(241,127,5);
+}
+
+
+/* nnn */
+
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  margin: 30px;
+  border: none !important;
+}
+
+/*
+========================
+BUTTON ONE
+========================
+*/
+.btn-one {
+  transition: all 0.3s;
+  position: relative;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(241,127,5,0.5);
+  border-bottom-color: rgba(241,127,5,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+/* nnn */
+
+
+.writing {
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.countdown {
+  text-align: center;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.countdown2 {
+  font-size: 20px;
+  text-align: center;
+  width: 160px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.ux {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+}
+
+.ui {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+}
+
+.web {
+  float: left;
+  width: 160px;
+}
+
+.designs {
+  width: 100%;
+  text-align: center;
+  display:inline-block;
+}
+
+.designs2 {
+  display: inline-block;
+}
+
+.contact {
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+.logo {
+  position:relative;
+  margin: 30px 30px 30px 30px;
+  clear:both;
+  overflow: hidden;
+  height:auto;
+  z-index: 0;
+  text-align:center;
+}
+
+.social {
+  width: 35px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.webicons {
+  width: 100px;
+}
+
+.socialthanks {
+  margin-bottom: 50px;
+}
+
+.contactheading {
+  padding: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-shadow: none;
+  outline: none;
+}
+
+input {
+  border-color: rgba(241,127,5,0.5);
+  border-radius: 10px;
+  border-width: 2px;
+  font: inherit;
+  font-weight: 200;
+  padding: 15px;
+  margin: 5px;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.line1 {
+  display: inline-block;
+}
+
+.line2 {
+  display: inline-block;
+}
+
+.formheading {
+  margin-bottom: 50px;
+}
+
+
+.border {
+  border: #F17F05 solid 2px;
+  background-color: rgb(0, 0, 0, 0.6);
+  min-height: 100vh;
+  margin: 20px;
+  background-clip: content-box;
+}
+
+
+.column1 {
+  float: left;
+  width: 30%;
+}
+
+.column2 {
+  float: left;
+  width: 70%;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+
+.row {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.conteinerimage {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.conteinerimage2 {
+  max-height: 50%;
+  max-width: 50%;
+  padding: 10px;
+}
+
+.teamimage {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.team {
+  margin: 10px;
+}
+
+.project {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 30px;
+  padding: 20px;
+  overflow: auto;
+
+}
+
+.projectimage1 {
+  width: 300px;
+  border:2px solid rgba(241,127,5);
+  float: left;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+.projectimage2 {
+  width: 300px;
+  border:2px solid rgba(241,127,5);
+  float: right;
+  margin: 20px;
+}
+
+.projectimage3 {
+  width: 300px;
+  border:2px solid rgba(241,127,5);
+  margin: 20px;
+}
+
+.projectimage4 {
+  width: 100px;
+  border:2px solid rgba(241,127,5);
+  float: none;
+  margin: 20px;
+}
+
+.projectimage5 {
+  width: 400px;
+  border:2px solid rgba(241,127,5);
+  margin: 20px;
+}
+
+.projectimage6 {
+  width: 200px;
+  border:2px solid rgba(241,127,5);
+  float: none;
+  margin: 20px;
+}
+
+.paragraph1 {
+  text-align: left;
+  padding: 10px;
+}
+
+.paragraph2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.paragraph3 {
+  text-align: left;
+  padding: 10px;
+}
+
+.projectheading {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px;
+  padding: 30px;
+}
+
+/***read more button style***/
+
+input.read-more-state,
+input.read-more-state2 {
+  display: none;
+}
+p.read-more-target,
+p.read-more-target2 {
+  font-size: 0;
+  max-height: 0;
+  opacity: 0;
+  transition: .25s ease;
+}
+input.read-more-state:checked ~ div.read-more-wrap p.read-more-target,
+input.read-more-state2:checked ~ div.read-more-wrap2 p.read-more-target2 {
+  font-size: inherit;
+  max-height: 999em;
+  opacity: 1;
+  margin: 10px;
+}
+input.read-more-state ~ label.read-more-trigger:before,
+input.read-more-state2 ~ label.read-more-trigger2:before {
+  content: 'Leer mas';
+}
+input.read-more-state:checked ~ label.read-more-trigger:before,
+input.read-more-state2:checked ~ label.read-more-trigger2:before {
+  content: 'Leer menos';
+}
+label.read-more-trigger,
+label.read-more-trigger2  {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  text-decoration: underline;
+  color: rgba(241,127,5);
+}
+
+input.read-more-state3,
+input.read-more-state4 {
+  display: none;
+}
+p.read-more-target3,
+p.read-more-target4 {
+  font-size: 0;
+  max-height: 0;
+  opacity: 0;
+  transition: .25s ease;
+}
+input.read-more-state3:checked ~ div.read-more-wrap3 p.read-more-target3,
+input.read-more-state4:checked ~ div.read-more-wrap4 p.read-more-target4 {
+  font-size: inherit;
+  max-height: 999em;
+  opacity: 1;
+  margin: 10px;
+}
+input.read-more-state3 ~ label.read-more-trigger3:before,
+input.read-more-state4 ~ label.read-more-trigger4:before {
+  content: 'Read more';
+}
+input.read-more-state3:checked ~ label.read-more-trigger3:before,
+input.read-more-state4:checked ~ label.read-more-trigger4:before {
+  content: 'Read less';
+}
+label.read-more-trigger3,
+label.read-more-trigger4  {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  text-decoration: underline;
+  color: rgba(241,127,5);
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../img/preloader.gif) center no-repeat #000;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+  html {
+    -webkit-background-size: 610px 900px;
+    -moz-background-size: 610px 900px;
+    -o-background-size: 610px 900px;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: 610px 900px;
+  }
+
+  .dropbtn {
+    display: inline-block;
+  }
+
+  .responsive {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .writing {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .red {
+    font-size: 13px;
+  }
+
+
+  .social {
+    width: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .webicons {
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .countdown {
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .countdown2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+  }
+
+  .designs {
+    width: 160px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .designs2 {
+    width: 100px;
+    text-align: center;
+    margin-right: auto;
+  }
+
+  .projectimage1 {
+    width: 250px;
+    float: none;
+    margin: 10px;
+  }
+
+  .projectimage2 {
+    width: 250px;
+    float: none;
+    margin: 10px;
+  }
+
+  .projectimage3 {
+    width: 250px;
+    float: none;
+    margin: 10px;
+  }
+
+  .projectimage5 {
+    width: 250px;
+    border:2px solid rgba(241,127,5);
+    margin: 10px;
+  }
+
+  .projectimage6 {
+    width: 200px;
+    border:2px solid rgba(241,127,5);
+    float: none;
+    margin: 10px;
+  }
+
+  .paragraph1 {
+    text-align: center;
+  }
+
+  .paragraph3 {
+    text-align: left;
+  }
+
+  .col1-sm { /* the styling for the 2 columns vertically stacked */
+    width: 100%; /* makes the 2 columns 100% wide overriding the 2col-lg 50% as the browser reads the classes bottom down */
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    float: none; /* removes the float right */
+    margin-top: 0; /* removes margin top */
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  nav ul {
+    display: inline-block; /* makes sure the menu in the nav can be centered with the center code in the header */
+  }
+
+  nav ul li:first-child {
+    margin-left: 0; /* removes the left margin of the first menu item */
+  }
+
+  .add {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+  }
+
+  .add2 {
+    margin-bottom: 50px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+  html {
+    -webkit-background-size: 410px 700px;
+    -moz-background-size: 410px 700px;
+    -o-background-size: 410px 700px;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: 410px 700px;
+  }
+
+  .row {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .dropbtn {
+    display: inline-block;
+  }
+
+  .responsive {
+    width: 50%;
+  }
+
+  .logo {
+    margin-top: -20px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 200;
+    margin: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+
+  .red {
+    font-size: 13px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+
+  .social {
+    width: 25px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .socialthanks {
+    margin-bottom: 80px;
+  }
+
+  .imput {
+    margin-left: 30px;
+  }
+
+  .btn {
+    width: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .webicons {
+    width: 50px;
+    margin: 0;
+  }
+
+  .countdown {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .countdown2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact {
+    text-align: center;
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .designs {
+    width: 100px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .designs2 {
+    width: 100px;
+    text-align: center;
+    margin-right: auto;
+  }
+
+  nav {
+    width: 100%;
+    float: none; /* removes the float right */
+    margin-top: 0; /* removes margin top */
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .border {
+    margin: 20px;
+  }
+
+
+  .projectimage1 {
+    width: 150px;
+    float: none;
+    margin: 10px;
+  }
+
+  .projectimage2 {
+    width: 150px;
+    float: none;
+    margin: 10px;
+  }
+
+  .projectimage3 {
+    width: 150px;
+    float: none;
+    margin: 10px;
+  }
+
+  .projectimage5 {
+    width: 150px;
+    border:2px solid rgba(241,127,5);
+    margin: 10px;
+  }
+
+  .projectimage6 {
+    width: 100px;
+    border:2px solid rgba(241,127,5);
+    float: none;
+    margin: 10px;
+  }
+
+  .paragraph1 {
+    text-align: center;
+  }
+
+  .paragraph3 {
+    text-align: left;
+  }
+
+  .projectheading {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .add {
+    font-size: 15px;
+    margin: 0;
+    color: #fff;
+  }
+
+  .add2 {
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+}
